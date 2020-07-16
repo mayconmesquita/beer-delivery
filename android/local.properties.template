@@ -1,0 +1,5 @@
+sdk.dir=/PATH/TO/Android/Sdk
+storeFile=/PATH/TO/my-release-key.keystore
+keyAlias=my-key-alias
+keyPassword=**THE KEY PASSWD HERE**
+storePassword=**THE STORE PASSWD HERE**
