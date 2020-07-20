@@ -56,8 +56,10 @@ export default class FloatingLabelInput extends React.PureComponent<Props> {
   }
 
   inputFocus = (ref: any, standBy?: boolean) => {
+    /* istanbul ignore next */
     const color = standBy ? this.props.placeholderTextColor : this.props.primaryColor;
 
+    /* istanbul ignore else */
     if (!this.inputVal && this.props.defaultValue) this.inputVal = this.props.defaultValue;
 
     /* istanbul ignore next */
@@ -103,6 +105,7 @@ export default class FloatingLabelInput extends React.PureComponent<Props> {
     }
   }
 
+  /* istanbul ignore next */
   onChangeText = (text: string = '') => {
     this.inputVal = text;
 
