@@ -170,6 +170,12 @@ export default class FloatingLabelInput extends React.PureComponent<Props> {
   };
 }
 
+/* istanbul ignore next */
+const errorLabelStyle = {
+  left: Platform.OS === 'android' ? 1 : 5,
+  top: Platform.OS === 'android' ? -5 : 10,
+}
+
 const styles: any = {
   borderStyle: {
     height: 2,
@@ -192,10 +198,9 @@ const styles: any = {
     fontSize: 13,
   },
   errorLabelStyle: {
+    ...errorLabelStyle,
     position: 'absolute',
-    left: Platform.OS === 'android' ? 1 : 5,
     opacity: 0,
-    top: Platform.OS === 'android' ? -5 : 10,
     fontSize: 13,
   },
 }
